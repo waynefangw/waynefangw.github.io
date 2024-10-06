@@ -7,7 +7,7 @@ description: "Every failure is leading towards success."
 keyword: "Wayne Fang, Wayne Fang Blog, , fangw ,  fangw Blog"
 url: "http://qiubaiying.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/qiubaiying/qiubaiying.github.io.git" # you code repository
+github_repo: "https://github.com/waynefangw/waynefangw.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -23,7 +23,7 @@ RSS: false
 github_username:    waynefangw
 facebook_username:  fangwei1113
 jianshu_username:   aed8403f5a92
-#twitter_username:   qiubaiying
+twitter_username:   waynefangw
 
 
 
@@ -57,7 +57,7 @@ kramdown:
 
 # 评论系统
 # Disqus（https://disqus.com/）
-# disqus_username: qiubaiying
+# disqus_username: disqus_t5x32zsAGE
 
 # Gitalk
 gitalk:
@@ -78,7 +78,7 @@ ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
 ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-ga_domain: qiubaiying.top               # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
+ga_domain: auto             # 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto
 
 
 
