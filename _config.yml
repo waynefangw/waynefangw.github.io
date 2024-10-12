@@ -5,7 +5,7 @@ header-img: img/post-bg-desk.jpg
 email: wayne.fang@outlook.com
 description: "Every failure is leading towards success."
 keyword: "Wayne Fang, Wayne Fang Blog, , fangw ,  fangw Blog"
-url: "http://qiubaiying.github.io"          # your host, for absolute URL
+url: "http://waynefangw.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/waynefangw/waynefangw.github.io.git" # you code repository
 
