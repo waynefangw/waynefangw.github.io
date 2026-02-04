@@ -1,0 +1,215 @@
+baseURL: "http://waynefangw.github.io/"
+title: "Wayne'Log"  # 添加全局标题
+theme: "PaperMod"
+
+# 功能开关
+enableEmoji: true
+enableRobotsTXT: true  # 添加搜索引擎支持
+hasCJKLanguage: true
+
+# 多语言设置
+defaultContentLanguage: en
+defaultContentLanguageInSubdir: false
+
+# 构建选项
+buildDrafts: false
+buildFuture: false  # 添加：不构建未来日期的文章
+buildExpired: false  # 添加：不构建过期内容
+
+# 全局参数
+params:
+  # 主题设置
+  defaultTheme: white
+  disableThemeToggle: false  # 添加：允许切换主题
+  
+  # 显示设置
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true  # 修正: ShowCodeButtons -> ShowCodeCopyButtons
+  ShowReadingTime: true
+  ShowWordCount: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true  # 添加：显示面包屑导航
+  ShowToc: true
+  TocOpen: true
+  
+  fancybox:
+    enabled: true
+
+  math: true
+
+  # RSS 设置
+  ShowFullTextinRSS: true
+  ShowRssButtonInSectionTermList: true
+  
+  # 其他功能
+  comments: true
+  dateFormat: "2006-01-02"  # 修正：使用 Go 的时间格式
+  # busuanzi: # 不🧄子-页面统计（https://busuanzi.ibruce.info/）
+  #   enable: true
+  # hideFooter: true  # 禁用默认页脚
+
+  # cover: # 点击显示全图
+  #   linkFullImages: true
+
+  ShowLastMod: true
+
+  enableGitInfo: true
+
+  headerLayout: "island" # 使用自定义模板
+
+  # 搜索功能
+  fuseOpts:  # 添加：搜索配置
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/waynefangw"
+
+  # 博客网页图片
+  assets:
+    favicon: "images/blog.png"
+    favicon16x16: "images/blog.png"
+    favicon32x32: "images/blog.png"
+    # apple_touch_icon: "images/blog.png"
+    # safari_pinned_tab: "images/blog.png"
+    customJS:
+      - js/header-island.js
+      - js/carousel.js  # 添加这一行
+    customCSS:
+      - css/common/header.css # 存放上述CSS
+      - css/extended/carousel.css
+  # 评论设置
+  giscus:
+    repo: "Downmars/Downmars.github.io"
+    repoId: "R_kgDONa-How"
+    category: "Announcements"
+    categoryId: "DIC_kwDONa-Ho84CmJrl"
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "bottom"
+    lightTheme: "light"
+    darkTheme: "dark"
+    lang: "en-US"
+    crossorigin: "anonymous"
+
+  homeInfoParams:
+    title: "欢迎来到我的博客"
+    content: "这里是我的个人博客，欢迎访问。"
+    
+# 多语言配置
+languages:
+#  zh:
+#     languageCode: "zh-CN"
+#     languageName: "简体中文"
+#     contentDir: "content/"
+#     weight: 1
+#     title: "Wayne'Log"
+#     params:
+#       description: "测试描述"
+#       profileMode:  # 添加：个人主页模式
+#         enabled: true
+#         title: "DLog \U0001F44B"
+#         subtitle: "Personal'Log"
+#     menu:
+#       main:
+#         - identifier: posts  # 添加：标识符
+#           name: "墓志铭"
+#           url: "/posts/"
+#           weight: 1  # 修正: wight -> weight
+#         - identifier: thoughts
+#           name: "翻案集"
+#           url: "/thoughts/"
+#           weight: 2
+#         - identifier: archives  # 添加：归档页
+#           name: "故纸堆"
+#           url: "/archives/"
+#           weight: 3
+#         - identifier: search
+#           name: "寻章句"
+#           url: "/search/"
+#           weight: 4
+#         - identifier: friends
+#           name: "江湖录"
+#           url: "/friends/"
+#           weight: 5
+
+ en:
+   languageCode: "en-US"
+   languageName: "English"
+   contentDir: "content"
+   weight: 2
+   title: "Wayne'Log"
+   params:
+     description: "test_description"
+     profileMode:
+       enabled: false
+       title: "Wayne'Log"
+       subtitle: "Personal Blog"
+   menu:
+     main:
+       - identifier: Home
+         name: "Home"
+         url: "/"
+         weight: 1
+       - identifier: posts
+         name: "Posts"
+         url: "/posts/"
+         weight: 2
+      #  - identifier: thoughts
+      #    name: "Thoughts"
+      #    url: "/thoughts/"
+      #    weight: 2
+       - identifier: archives
+         name: "Archives"
+         url: "/archives/"
+         weight: 3 
+       - identifier: search
+         name: "Search"
+         url: "/search/"
+         weight: 4 
+      #  - identifier: friends
+      #    name: "Friends"
+      #    url: "/friends/"
+      #    weight: 5
+
+
+pagination:
+  disableAliases: false
+  pagerSize: 10 
+  path: page 
+
+frontmatter:
+  lastmod: ['lastmod', ':git', 'date', 'publishDate']
+
+dateFormat:
+  published: 2006-01-02
+  lastUpdated: 2006-01-02 15:04 MST
+
+# 输出设置
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON  # 添加：支持搜索功能
+
+# Markdown 设置
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: dracula
+    lineNumbersInTable: true
+
+

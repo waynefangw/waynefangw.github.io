@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Home on Wayne&#39;Log</title>
+    <link>http://localhost:12409/</link>
+    <description>Recent content in Home on Wayne&#39;Log</description>
+    <generator>Hugo -- 0.155.2</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 09 Dec 2025 22:27:02 +0800</lastBuildDate>
+    <atom:link href="http://localhost:12409/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clone_your_archlinux</title>
+      <link>http://localhost:12409/posts/2025_12_09-clone_your_archlinux/</link>
+      <pubDate>Tue, 09 Dec 2025 22:27:02 +0800</pubDate>
+      <guid>http://localhost:12409/posts/2025_12_09-clone_your_archlinux/</guid>
+      <description>&lt;p&gt;前段时间，我朋友入手了5090（可恶的有钱人），将淘汰下来的主机出手给了我，由于附带的卡是5070 12g，虽然说显存不够大，但是还是想要体验一下N卡的本地模型的乐趣，所以就接手了。于是，我面临了一个问题，我如何将我现有的archlinux配置克隆到新主机上。&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>前段时间，我朋友入手了5090（可恶的有钱人），将淘汰下来的主机出手给了我，由于附带的卡是5070 12g，虽然说显存不够大，但是还是想要体验一下N卡的本地模型的乐趣，所以就接手了。于是，我面临了一个问题，我如何将我现有的archlinux配置克隆到新主机上。</p>
+<h2 id="全盘克隆-or-配置文件克隆">全盘克隆 or 配置文件克隆</h2>
+<p>现在我面临一个问题，我就是是选择全盘将系统克隆过去，还是只是克隆一些配置文件。前一种方案的好处即全盘克隆可以原封不动实现系统迁徙，并且立即能用；但是存在以下一系列问题，如会携带旧系统大量的垃圾文件，对于不同硬件适配可能产生冲突，就像把旧电脑的主板焊到新机箱使用，维护难度很大。后一种好处有可以在移植的时候思考哪些是我们迁移的时候必要的文件，最小化克隆，对于不同的硬件场景我们也可以很好的进行适配，比如说我们需要将现有的配置移植到arm平台的archlinux，同时不会携带一些旧文件，不适用的驱动等。前一种有如<a href="https://wiki.archlinuxcn.org/wiki/Dd"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   dd<span class="external-link">↗</span></a>
+，<a href="https://clonezilla.org/"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   clonezilla<span class="external-link">↗</span></a>
+，<a href="https://wiki.archlinuxcn.org/wiki/Rsync"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   rsync<span class="external-link">↗</span></a>
+；后一种我们选择使用<a href="https://wiki.archlinux.org/title/Dotfiles"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   dotfiles<span class="external-link">↗</span></a>
+。<br>
+很显然，我们会选择dotfiles作为我们的克隆系统方案，尽管他麻烦一点:)。</p>
+<h2 id="步骤">步骤</h2>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>2025_11_16 Build_a_personal_website</title>
+      <link>http://localhost:12409/posts/2025_11_16-build_a_personal_website/</link>
+      <pubDate>Sun, 16 Nov 2025 17:41:01 +0800</pubDate>
+      <guid>http://localhost:12409/posts/2025_11_16-build_a_personal_website/</guid>
+      <description>&lt;p&gt;我现在的博客部署在&lt;a href=&#34;github.io&#34;
+   
+   
+   class=&#34;custom-link&#34;&gt;  
+   github.io&lt;/a&gt;
+上，一直想要在个人网站上搭建自己的博客以及部署一些有意思的项目，这次趁双十一购入了服务器与域名，这里做一个简单的记录。&lt;/p&gt;
+&lt;h2 id=&#34;一台可用的vps&#34;&gt;一台可用的VPS&lt;/h2&gt;
+&lt;p&gt;你可以在任意VPS提供商上购买所需要的服务器，比如说我这边是用的是&lt;a href=&#34;https://www.google.com/url?sa=t&amp;amp;source=web&amp;amp;rct=j&amp;amp;opi=89978449&amp;amp;url=https://www.racknerd.com/&amp;amp;ved=2ahUKEwj9rN3guvaQAxU3m68BHZHhF5kQFnoECD0QAQ&amp;amp;usg=AOvVaw1f3G5tQVYCJRLV5V-s0O-I&#34;
+   
+    
+       target=&#34;_blank&#34; rel=&#34;noopener&#34; 
+   
+   class=&#34;custom-link&#34;&gt;  
+   RackNerd&lt;span class=&#34;external-link&#34;&gt;↗&lt;/span&gt;&lt;/a&gt;
+，正好赶上双11优惠，花费了70块弄了一个低配的KVM小机子，用作轻量级服务。1vCPU, 1G内存, 20G硬盘空间，3T/月的带宽，虽说配置比较低，但是很适合配置轻量级服务器与学习作用。&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<p>我现在的博客部署在<a href="github.io"
+   
+   
+   class="custom-link">  
+   github.io</a>
+上，一直想要在个人网站上搭建自己的博客以及部署一些有意思的项目，这次趁双十一购入了服务器与域名，这里做一个简单的记录。</p>
+<h2 id="一台可用的vps">一台可用的VPS</h2>
+<p>你可以在任意VPS提供商上购买所需要的服务器，比如说我这边是用的是<a href="https://www.google.com/url?sa=t&amp;source=web&amp;rct=j&amp;opi=89978449&amp;url=https://www.racknerd.com/&amp;ved=2ahUKEwj9rN3guvaQAxU3m68BHZHhF5kQFnoECD0QAQ&amp;usg=AOvVaw1f3G5tQVYCJRLV5V-s0O-I"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   RackNerd<span class="external-link">↗</span></a>
+，正好赶上双11优惠，花费了70块弄了一个低配的KVM小机子，用作轻量级服务。1vCPU, 1G内存, 20G硬盘空间，3T/月的带宽，虽说配置比较低，但是很适合配置轻量级服务器与学习作用。</p>
+<p>反正就是权衡一下自己的需求，按照性能、稳定性、性价比来选择自己的服务器选型，大家可以自行去网上寻找关于各家VPS的测评。</p>
+<p>我这边购买了RackNerd的服务器遇到了很奇怪的问题。在登录验证邮件中的IP 地址和登录进控制台实际显示的IP 地址不一致，最后是控制台实际显示的IP 地址是正确地址，通过控制台显示的IP能够正常登录。</p>
+<h2 id="一个可用的域名">一个可用的域名</h2>
+<p>你同样可以在任意的顶级域名提供商上购买你所中意的域名，我们一般选择<code>.com</code>后缀的域名，具体关于域名选择的讨论可以看<a href="https://news.ycombinator.com/item?id=14458349"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   Ask HN: Which domain extension would you choose for your personal site?<span class="external-link">↗</span></a>
+。<br>
+我这里选择的是<a href="https://www.spaceship.com/zh/"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   SpaceShip<span class="external-link">↗</span></a>
+上购买我的域名，在哪一家购买域名都可以，基本上就是看价格谁家便宜，我这里购买了<a href="downmars.com"
+   
+   
+   class="custom-link">  
+   downmars.com</a>
+。</p>
+<h2 id="dns解析">DNS解析</h2>
+<p>DNS（Domain Name System）域名系统可以告诉网络你的域名关联再哪个服务器上面，我这边选择了<a href="https://dash.cloudflare.com/profile/authentication"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   Cloudflare<span class="external-link">↗</span></a>
+。它除了帮忙提供DNS解析之外，还能够提供安全流量代理、CDN解析等内容。</p>
+<p>我们再Cloudflare上添加需要管理的域名，选择免费套餐即可，在记录中添加：</p>
+<ul>
+<li>Type: A, Name: @, Content: 你的IP地址</li>
+<li>Type: CNAME, Name: www, Content: 你的域名<br>
+这两个分别是将访问的域名联系上服务器的IP与将www自动跳转到主域名。</li>
+</ul>
+<p>到此，我们设置服务器、域名与DNS解析部分的设置就已经基本完成了，接下来我们就可以在服务器上部署我的所需要的服务了。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>江湖录</title>
+      <link>http://localhost:12409/zh/friends/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:12409/zh/friends/</guid>
+      <description>这是我的友链页面</description>
+      <content:encoded><![CDATA[<a target="_blank" href=https://downmars.github.io/zh/posts/ title=Downmars class="friendurl">
+  <div class="frienddiv">
+    <div class="frienddivleft">
+      <img class="myfriend" src=https://raw.githubusercontent.com/Downmars/images-PicGo/main/img/miku.jpg />
+    </div>
+    <div class="frienddivright">
+      <div class="friendname">Downmars</div>
+      <div class="friendinfo">Enjoy your life!</div>
+    </div>
+  </div>
+</a>
+
+
+<a target="_blank" href=https://www.zanks.link/ title=乱话三千 class="friendurl">
+  <div class="frienddiv">
+    <div class="frienddivleft">
+      <img class="myfriend" src=https://avatars.githubusercontent.com/u/144093429?v&#61;4 />
+    </div>
+    <div class="frienddivright">
+      <div class="friendname">乱话三千</div>
+      <div class="friendinfo">养了一只叫基金的可爱小猫,平时会写点技术向的东西,有点做饭的小爱好</div>
+    </div>
+  </div>
+</a>
+
+
+<hr>
+<h2 id="欢迎大家来访欢迎互换友链">欢迎大家来访，欢迎互换友链！</h2>
+<p>有需要互换友链的可以参考此处，可以在评论区留下你的友链：</p>
+<blockquote class="quote"><p>name=&ldquo;Downmars&rdquo;<br>
+url=&ldquo;<a href="https://downmars.github.io/zh/posts/%22"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   https://downmars.github.io/zh/posts/"<span class="external-link">↗</span></a>
+<br>
+logo=&ldquo;<a href="https://raw.githubusercontent.com/Downmars/images-PicGo/main/img/miku.jpg%22"
+   
+    
+       target="_blank" rel="noopener" 
+   
+   class="custom-link">  
+   https://raw.githubusercontent.com/Downmars/images-PicGo/main/img/miku.jpg"<span class="external-link">↗</span></a>
+<br>
+word=&ldquo;Enjoy your life!&rdquo;</p></blockquote>
+
+]]></content:encoded>
+    </item>
+    <item>
+      <title>翻案集</title>
+      <link>http://localhost:12409/zh/thoughts/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:12409/zh/thoughts/search/</guid>
+      <description>thoughts</description>
+    </item>
+  </channel>
+</rss>

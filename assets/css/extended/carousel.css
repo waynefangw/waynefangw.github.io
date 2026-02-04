@@ -1,0 +1,309 @@
+.carousel-container {
+    margin: 2rem 0;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-item.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    color: white;
+}
+
+.carousel-caption h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.carousel-caption p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* 控制按钮 */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.carousel-control-prev {
+    left: 20px;
+}
+
+.carousel-control-next {
+    right: 20px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+}
+
+.carousel-control-prev-icon {
+    transform: rotate(135deg);
+    margin-left: 5px;
+}
+
+.carousel-control-next-icon {
+    transform: rotate(-45deg);
+    margin-right: 5px;
+}
+
+/* 指示器 */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.carousel-indicators li.active {
+    background: white;
+}
+
+.carousel-indicators li:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* 首页网格布局 */
+.home-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+}
+
+/* 轮播图与主内容+侧边栏同宽 */
+.home-wrapper > .carousel-container {
+    grid-column: 1 / 3;
+}
+
+/* 主内容区 */
+.home-main-content {
+    grid-column: 1;
+}
+
+.home-main-content h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+.home-main-content h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.home-main-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.home-main-content th,
+.home-main-content td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.home-main-content th {
+    background-color: var(--code-bg);
+    font-weight: 600;
+}
+
+.home-main-content tbody tr:hover {
+    background-color: var(--entry);
+}
+
+/* 右侧边栏 */
+.home-sidebar-content {
+    grid-column: 2;
+    position: sticky;
+    top: 1rem;
+    height: fit-content;
+}
+
+.sidebar-widget {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: none;
+}
+
+.sidebar-widget h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+/* 最新文章列表 */
+.recent-posts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.recent-posts-list li {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.recent-posts-list li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.recent-posts-list a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.recent-posts-list a:hover {
+    color: var(--primary);
+}
+
+.post-title {
+    display: block;
+    font-size: 1.25rem;
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    font-family: inherit;
+}
+
+.post-date {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--secondary);
+}
+
+/* NEW 角标 */
+.post-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.125rem 0.5rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}
+
+.post-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-title-wrapper .post-title {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+/* 响应式：移动端 */
+@media (max-width: 768px) {
+    .home-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .home-main-content,
+    .home-sidebar-content {
+        grid-column: 1;
+    }
+    
+    .home-sidebar-content {
+        position: static;
+        order: -1;
+    }
+    
+    .home-main-content table {
+        font-size: 0.875rem;
+    }
+    
+    .home-main-content th,
+    .home-main-content td {
+        padding: 0.5rem;
+    }
+}

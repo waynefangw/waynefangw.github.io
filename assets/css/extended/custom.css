@@ -1,0 +1,369 @@
+/*.external-icon {*/
+/*    height: 1em;*/
+/*    width: auto;*/
+/*    vertical-align: middle;*/
+/*    margin-left: 0.3em;*/
+/*    display: inline-block;*/
+/*    line-height: 1;*/
+/*    position: relative;*/
+/*    top: -0.1em; /* 微调垂直位置 */*/
+/*}*/
+
+/* 链接基础样式 */
+.custom-link {
+  position: relative;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+
+/* 原有外部链接图标样式 */
+.external-link {
+  display: inline-block;
+  margin-left: 0.2em;
+  font-size: 0.8em;
+  text-decoration: none;
+  vertical-align: super;
+}
+
+/* 悬停效果 */
+.custom-link:hover {
+  outline: none; /* 移除默认轮廓 */
+  background:var(--code-bg);
+  border-radius: 5px; /* 圆角效果 */
+  box-shadow: 0 2px 4px var(--sidenote-shadow2); /* 默认轻微阴影 */
+  transition: all 0.3s ease; /* 增加平滑过渡效果 */
+  padding: 4px 0px; /* 增加内边距以便有足够空间 */
+}
+
+
+/* licenses.css */
+.license-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+  
+  /* 默认浅色主题 */
+  background: var(--code-bg);
+  color: var(--content);
+  border: 1px solid rgba(0,0,0,0.5);
+}
+
+.license-icon {
+  height: 24px;
+  width: auto;
+  transition: filter 0.3s ease;
+}
+
+/* 深色主题检测 */
+@media (prefers-color-scheme: dark) {
+  .license-badge:not([data-theme="light"]) {
+    background: var(--bg-dark);
+    color: var(--text-dark);
+    border-color: rgba(255,255,255,0.1);
+    
+    & .license-icon {
+      filter: invert(1) hue-rotate(180deg); /* 更自然的反色 */
+    }
+  }
+}
+
+/* 强制深色模式 */
+.license-badge[data-theme="dark"] {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  border-color: rgba(255,255,255,0.1);
+  
+  & .license-icon {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
+/* 悬停效果 */
+.license-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  
+  &[data-theme="dark"]:hover {
+    box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+  }
+}
+
+
+/*copy_button*/
+.copy-code {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    position: absolute;
+    right: 8px;
+    top: -6px;
+}
+
+.copy-code img {
+    opacity: 0.6;
+    transition: opacity 0.3s, filter 0.3s; /* 添加 filter 过渡效果 */
+}
+
+/*???为什么我注释这里会导致目录回到原位*/
+.copy-code.:hover img {
+    opacity: 1;
+    filter: invert(100%); /* 颜色翻转效果 */
+}
+
+/*.MathJax {*/
+/*font-size: 25px; !important; */
+/*}*/
+
+
+
+.sidenote {
+  float: right;
+  clear: right;
+  position: relative;
+  margin-top: 1rem;
+  max-width: 300px;
+  padding: 8px 16px; /* 增加内边距以便有足够空间 */
+  border: 2px solid transparent; /* 默认透明边框 */
+  border-radius: var(--radius); /* 圆角 */
+  box-shadow: 0 2px 4px var(--sidenote-shadow1); /* 默认轻微阴影 */
+  transition: all 0.3s ease; /* 增加平滑过渡效果 */
+}
+
+/* Wide viewport */
+@media (min-width: 1400px) {
+    .sidenote {
+        float: right;
+        clear: right;
+        margin-right: -20vw;
+        text-align: left;
+        top: -3rem;
+        width: 20vw;
+        margin-top: 1rem;
+    }
+}
+
+/* Narrow viewport */
+@media (max-width: 1400px) {
+    .sidenote {
+        float: right;
+        text-align: left;
+        width: 100%;
+        margin: 1rem 0;
+        padding-left: 15%;
+    }
+}
+
+/* 定义数字编号的外观 */
+.sidenote-number {
+  counter-increment: sidenote-counter;
+  position: relative;
+}
+
+/* 给每个sidenote添加#符号 */
+.sidenote::before {
+  content: "# ";
+  position: relative;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: red; /* 默认红色 */
+  transition: all 0.3s ease; /* 增加过渡效果 */
+}
+
+/* 双向悬停反馈 */
+.sidenote:hover,
+.sidenote-number:hover .sidenote,
+.sidenote:hover ~ .sidenote-number { /* 新增反向反馈 */
+    background-color: var(--sidenote-bg);
+    box-shadow: 0 4px 8px var(--sidenote-shadow2);
+    border-color: #409dff; /* 添加边框高亮 */
+}
+
+
+/* 给sidenote-number添加后缀# */
+.sidenote-number::after {
+  content: "#";
+  vertical-align: super;
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #409dff; /* 默认蓝色 */
+  transition: all 0.3s ease; /* 增加过渡效果 */
+}
+
+/* 悬停时，数字#和注释的高亮效果 */
+.sidenote-number:hover::after {
+  color: red; /* 悬停时改变#符号的颜色 */
+
+}
+
+/* 悬停时，增加sidenote的背景和阴影 */
+.sidenote-number:hover .sidenote {
+  background-color: var(--sidenote-bg-hover); /* 悬停时背景色变化 */
+  box-shadow: 0 4px 8px var(--sidenote-shadow2); /* 强化阴影效果 */
+}
+
+
+
+/*代码折叠*/
+.custom-collapse {
+    margin: 1rem 0;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--entry);
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.custom-collapse[open] {
+    border-color: var(--secondary);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.custom-collapse summary {
+    position: relative;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary);
+    list-style: none;
+    transition: background 0.2s ease;
+    background: var(--entry);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-collapse summary::-webkit-details-marker {
+    display: none;
+}
+
+.custom-collapse summary:before {
+    content: "▶";
+    position: absolute;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9em;
+    color: var(--secondary);
+    transition: transform 0.2s ease;
+}
+
+.custom-collapse[open] summary:before {
+    content: "▼";
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.custom-collapse summary:hover {
+    background: var(--tertiary);
+    box-shadow: 0 2px 4px var(--secondary); /* 默认轻微阴影 */
+    transition: all 0.3s ease; /* 增加平滑过渡效果 */
+}
+
+.custom-collapse .content {
+    border-top: 1px solid var(--border);
+    background: var(--code-bg);
+    animation: fadeIn 0.3s ease;
+    padding: 0;
+    position: relative;
+}
+
+.custom-collapse .content > * {
+    margin: 0rem !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 代码块样式适配 */
+.custom-collapse .content pre {
+    background: transparent !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    padding: 0rem !important;
+}
+
+.line-count {
+    font-size: 0.85em;
+    color: var(--secondary);
+    font-weight: normal;
+    margin-right: 1rem;
+}
+
+
+/*island*/
+/* 基础样式 */
+#island-header {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  z-index: 999;
+}
+
+#menu-blur {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* 标题切换动画 */
+#site-title, #page-title {
+  position: absolute;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#page-title {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.title-switched #site-title {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.title-switched #page-title {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.inline-svg {
+  display: inline-block;
+  height: 1.15rem;
+  width: 1.15rem;
+  top: 0.15rem;
+  position: relative;
+}
+
+.entry-cover {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;     /* 垂直居中 */
+    overflow: hidden;        /* 防止内容溢出 */
+}
+
+.entry-cover img {
+    max-width: 100%;         /* 限制宽度不超过父容器宽度 */
+    max-height: 300px;       /* 限制最大高度 */
+    width: auto;             /* 按比例调整宽度 */
+    height: auto;            /* 按比例调整高度 */
+    object-fit: contain;     /* 保持图像的原始比例 */
+}
+

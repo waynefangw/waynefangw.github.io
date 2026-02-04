@@ -1,0 +1,117 @@
+:root {
+    --gap: 24px;
+    --content-gap: 20px;
+    --nav-width: 1024px;
+    --main-width: 840px;
+    --header-height: 60px;
+    --footer-height: 60px;
+    --radius: 8px;
+    --theme: rgb(255, 255, 255);
+    --entry: rgb(255, 255, 255);
+    --primary: rgb(30, 30, 30);
+    --secondary: rgb(108, 108, 108);
+    --tertiary: rgb(214, 214, 214);
+    --content: rgb(31, 31, 31);
+    --code-block-bg: rgb(28, 29, 33);
+    --code-bg: rgb(245, 245, 245);
+    --border: rgb(238, 238, 238);
+    --hljs-bg: #f7f7f7;
+    --code-bg: rgb(245, 245, 245);
+
+  /* Theme-specific variables for sidenote */
+  --sidenote-bg: var(--theme); /* 侧注背景色 */
+  --sidenote-hover-bg: rgba(0, 0, 0, 0.05); /* 悬停时背景色 */
+  --sidenote-hover-border: var(--border); /* 悬停时边框颜色 */
+  --sidenote-color: var(--primary); /* 侧注数字颜色 */
+  --sidenote-number-color: var(--secondary); /* 侧注编号颜色 */
+  --sidenote-shadow1: rgba(0, 0, 0, 0.1);
+  --sidenote-shadow2: rgba(0, 0, 0, 0.2);
+
+}
+
+.dark {
+    --theme: rgb(29, 30, 32);
+    --entry: rgb(46, 46, 51);
+    --primary: rgb(218, 218, 219);
+    --secondary: rgb(155, 156, 157);
+    --tertiary: rgb(65, 66, 68);
+    --content: rgb(196, 196, 197);
+    --code-block-bg: rgb(46, 46, 51);
+    --code-bg: rgb(55, 56, 62);
+    --border: rgb(51, 51, 51);
+    --hljs-bg: rgb(46, 46, 51);
+    --code-bg: rgb(55, 56, 62);
+
+  /* Theme-specific variables for sidenote */
+  --sidenote-bg: var(--code-bg); /* 侧注背景色 */
+  --sidenote-hover-bg: var(--theme); /* 悬停时背景色 */
+  --sidenote-hover-border: var(--border); /* 悬停时边框颜色 */
+  --sidenote-color: var(--primary); /* 侧注数字颜色 */
+  --sidenote-number-color: var(--secondary); /* 侧注编号颜色 */
+  --sidenote-shadow1: rgba(0, 0, 0, 0.1);
+  --sidenote-shadow2: rgba(0, 0, 0, 0.2);
+}
+
+.list {
+    background: var(--code-bg);
+}
+
+.dark.list {
+    background: var(--theme);
+}
+
+
+/**/
+/*/* 主色 - 淡米黄色 (Light Beige) */*/
+/*--light-beige: #f5e6d3;  /* 用于背景色，温暖柔和 */*/
+/**/
+/*/* 强调色 - 暗红色 (Dark Red) */*/
+/*--dark-red: #8b3a3a;  /* 用于标题、按钮或关键交互元素 */*/
+/**/
+/*/* 中性色 */*/
+/*--light-gray: #d3d3d3;  /* 用于分隔线、背景框等辅助元素 */*/
+/*--dark-gray: #707070;  /* 用于文本颜色，深灰色比黑色柔和 */*/
+/**/
+/*/* 辅助色 */*/
+/*--cream-white: #faf0e6;  /* 用于内容区域的背景，增加清新感 */*/
+/*--warm-brown: #c99b6d;  /* 用于强调交互元素或按钮 */*/
+/**/
+/*/* 文本颜色 */*/
+/*--primary-text: #333333;  /* 主文本颜色，深灰色 */*/
+/*--secondary-text: #666666;  /* 次要文本颜色，适用于小字体或标签 */*/
+/**/
+/*/* 按钮与交互元素 */*/
+/*--button-bg: #9e2a2f;  /* 深红色按钮背景 */*/
+/*--button-hover: #b94b4b;  /* 按钮悬停时的背景色 */*/
+/**/
+/*/* 链接和强调 */*/
+/*--link-color: #1e3a5f;  /* 深蓝色链接，提供对比感 */*/
+/**/
+
+
+
+/**/
+/*/* 主色 - 深炭黑色 (Deep Charcoal) */*/
+/*--deep-charcoal: #1a1a1a;  /* 用于背景色，深邃沉稳 */*/
+/**/
+/*/* 强调色 - 勃艮第红 (Burgundy) */*/
+/*--burgundy: #6d1a1a;  /* 用于标题/关键元素，暗光下更醒目 */*/
+/**/
+/*/* 中性色 */*/
+/*--medium-dark-gray: #3a3a3a;  /* 用于分隔线与次级背景，增强层次 */*/
+/*--light-gray: #c0c0c0;  /* 用于文本颜色，保持暗光可读性 */*/
+/**/
+/*/* 辅助色 */*/
+/*--off-black: #2d2d2d;  /* 用于内容区域背景，避免纯黑刺眼 */*/
+/*--muted-gold: #b8860b;  /* 用于点缀元素，保持温暖感不跳脱 */*/
+/**/
+/*/* 文本颜色 */*/
+/*--primary-text: #e0e0e0;  /* 主文本颜色，浅灰保证可读性 */*/
+/*--secondary-text: #a0a0a0;  /* 次要文本颜色，降低视觉疲劳 */*/
+/**/
+/*/* 按钮与交互元素 */*/
+/*--button-bg: #8b0000;  /* 砖红色按钮，暗光下保持可见 */*/
+/*--button-hover: #a52a2a;  /* 悬停色带轻微亮度提升 */*/
+/**/
+/*/* 链接和强调 */*/
+/*--link-color: #5f9ea0;  /* 灰蓝色链接，柔和对比 */*/
