@@ -8,18 +8,18 @@ ShowBreadCrumbs: false
 
 <div class="home-main-content">
 
-## About Me
+## Bio
 
-你好！欢迎来到我的个人的 鹅鹅鹅博客。我是一名热爱技术的开发者，专注于分享技术知识和学习心得。
+Hey, this is Wayne Fang. I am documenting my Bio and achievements in this blog👀.
 
 ### 技能特长
 
-- 前端开发
-- 后端开发
-- 嵌入式系统
-- 开源贡献
+- 👋 Wayne Fang currently serves as the head of the Document and Knowledge Processing Division at the AI and Digitalization Research Center of China IPPR International Engineering Co., Ltd. (China IPPR). In recent years, he has led or participated in the development of knowledge bases, knowledge graphs, and large language models.
+- 💗 Research Focus: LLM(Large Language Model)、RAG(Retrieval-Augmented Generation)、Document Intelligence、Knowledge Graph、Text Computation.
+- 📐Sector Experience：Internet、Architectural Design、Retail.
+- 🧵 Academic Achievements：3 Invention patent, 2 Computer software copyright, Over 10 top papers (e.g. TOIS(CCF-A)、ICASSP(CCF-B)).
 
-## 项目列表
+## Open Source Projects
 
 | Project Name                                                               | Chinese Name | Project Type | Project Description | Update Date |
 | -------------------------------------------------------------------------- | ------------ | ------------ | ------------------- | ----------- |
