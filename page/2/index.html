@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head>
+	<meta name="generator" content="Hugo 0.155.2"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=9183&amp;path=livereload" data-no-instant defer></script>
+    <link rel="stylesheet" href="/an-old-hope.min.css"><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Wayne&#39;Log</title>
+
+<meta name="description" content="test_description">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:9183/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.932f27da16483c7065daac7b9306d09ab28e87bc5fad4e70a32e02c857f95b00.css" integrity="sha256-ky8n2hZIPHBl2qx7kwbQmrKOh7xfrU5woy4CyFf5WwA=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:9183/images/blog.png">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:9183/images/blog.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:9183/images/blog.png">
+<link rel="apple-touch-icon" href="http://localhost:9183/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:9183/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:9183/index.xml" title="rss">
+<link rel="alternate" type="application/json" href="http://localhost:9183/index.json" title="json">
+<link rel="alternate" hreflang="en" href="http://localhost:9183/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+                color-scheme: dark;
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .toc {
+                background: var(--entry);
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            .list::-webkit-scrollbar-thumb {
+                border-color: var(--code-bg);
+            }
+        }
+
+    </style>
+</noscript>
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else if (localStorage.getItem("pref-theme") === "light") {
+       document.querySelector("html").dataset.theme = 'light';
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.querySelector("html").dataset.theme = 'dark';
+    } else {
+        document.querySelector("html").dataset.theme = 'light';
+    }
+
+</script>
+
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
+
+
+
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="list" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:9183/" accesskey="h" title="Wayne&#39;Log (Alt + H)">Wayne&#39;Log</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:9183/" title="Home">
+                    <span class="active">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:9183/posts/" title="Posts">
+                    <span>Posts</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:9183/archives/" title="Archives">
+                    <span>Archives</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:9183/search/" title="Search">
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
+</header><main class="main"> 
+<div class="post-content"><div class="carousel-container">
+    <div class="carousel">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <img src="/images/slide1.png" alt="Slide 1">
+                <div class="carousel-caption">
+                    <h3>标题 1</h3>
+                    <p>描述文字 1</p>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="/images/slide2.png" alt="Slide 2">
+                <div class="carousel-caption">
+                    <h3>标题 2</h3>
+                    <p>描述文字 2</p>
+                </div>
+            </div>
+            
+            <div class="carousel-item">
+                <img src="/images/slide3.png" alt="Slide 3">
+                <div class="carousel-caption">
+                    <h3>标题 3</h3>
+                    <p>描述文字 3</p>
+                </div>
+            </div>
+        </div>
+        
+        
+        <a class="carousel-control-prev" href="#" role="button">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" href="#" role="button">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+        
+        
+        <ol class="carousel-indicators">
+            <li data-target="0" class="active"></li>
+            <li data-target="1"></li>
+            <li data-target="2"></li>
+        </ol>
+    </div>
+</div>
+
+<h2 id="关于我">关于我<a hidden class="anchor" aria-hidden="true" href="#关于我">#</a></h2>
+<p>你好！欢迎来到我的个人博客。我是一名热爱技术的开发者，专注于分享技术知识和学习心得。</p>
+<h3 id="技能特长">技能特长<a hidden class="anchor" aria-hidden="true" href="#技能特长">#</a></h3>
+<ul>
+<li>前端开发</li>
+<li>后端开发</li>
+<li>嵌入式系统</li>
+<li>开源贡献</li>
+<li></li>
+</ul>
+<h2 id="项目列表">项目列表<a hidden class="anchor" aria-hidden="true" href="#项目列表">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Project Name</th>
+          <th>Chinese Name</th>
+          <th>Project Type</th>
+          <th>Project Description</th>
+          <th>Update Date</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>waynefangw.github.io</td>
+          <td>个人博客网站</td>
+          <td>Web</td>
+          <td>基于 Hugo 搭建的个人技术博客</td>
+          <td>2026-02-04</td>
+      </tr>
+      <tr>
+          <td>example-project-1</td>
+          <td>示例项目一</td>
+          <td>Application</td>
+          <td>这是一个示例项目描述</td>
+          <td>2026-01-15</td>
+      </tr>
+      <tr>
+          <td>example-project-2</td>
+          <td>示例项目二</td>
+          <td>Library</td>
+          <td>示例库项目说明</td>
+          <td>2026-01-20</td>
+      </tr>
+  </tbody>
+</table>
+
+
+</div>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">ZH-3408 Modbus 命令码与关键参数配置速查手册
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>Modbus 基本命令 0x03 – 查询从设备寄存器内容 主设备发送报文 从设备地址范围 功能码 起始寄存器地址 寄存器个数 CRC校验码 / 0x01 - 0xFF (1 字节) 0x03 (1 字节) (2 字节) (2 字节) (2 字节) 主设备接受报文 从设备地址范围 功能码 数据区字节数 数据区 CRC校验码 / 0x01 - 0xFF (1 字节) 0x03 (1 字节) 2 * 寄存器个数 (1 字节) 寄存器内容 (2 * 寄存器个数字节) (2 字节) 例子： 读所有数据发送命令举例 主设备发送报文 从设备地址范围 功能码 起始寄存器地址 寄存器个数 CRC校验码 / 01 03 00 00 00 47 xx xx 说明： 从寄存器 0 开始，连续读 72 (0x47) 个寄存器数据，每一路数据占用一路寄存器。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-08-07 17:13:55 +0800 CST'>2025-08-07</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;1501 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to ZH-3408 Modbus 命令码与关键参数配置速查手册" href="http://localhost:9183/zh/posts/2025_08_07-zh3408_modbus_document_instructions_for_use/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">STM32H7之串口DMA驱动原理
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>TODO gpt answer↗ DMA 定义 DMA，全程Direct Memory Access，即直接储存器访问。DMA的作用就是实现数据的直接传输，从而去掉了传统数据传输需要CPU寄存器参与的环节，大大节省了CPU资源的消耗。此过程主要涉及外设与存储器之间的以及存储器与存储器之间提供高速数据传输，本质上都是数据从内存的某一区域传输到内存的另一区域外设的数据寄存器本质上就是内存的一个存储单元 。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-08-06 10:53:31 +0800 CST'>2025-08-06</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;1115 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to STM32H7之串口DMA驱动原理" href="http://localhost:9183/zh/posts/2025_08_06-stm32h7_serial_port_dma_driver_principle/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">我是否需要nvim插件
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>今天在尝试寻找一个程序问题的时候，想到了我是不是可以在nvim上添加一个调试的插件，我在搜索的过程中发现一篇有意思的讨论 how many of you use a debugger with nvim↗ 。题主在讨论中说到了“我在使用 VS Code 时从未设置或使用过调试器，并且一直觉得调试器可能有用却也可能麻烦，所以我现在在考虑是否值得在迁移到 Neovim 后去研究它的调试功能”。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-07-29 15:41:59 +0800 CST'>2025-07-29</span>&nbsp;·&nbsp;6 min&nbsp;·&nbsp;2908 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to 我是否需要nvim插件" href="http://localhost:9183/zh/posts/2025_07_29-do_i_need_neovim_plugins/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">这样写Git Commit Message也许会更好
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>我在写博客中的过程中，我往往会对于一篇博客进行多次的增添与修改，我一直苦恼于这次修改后如何添加Commit Message。就在刚才的又一次提交中，我想我应该规范下我的Commit Message的规范了，遂写下这一篇文章。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-07-28 16:55:15 +0800 CST'>2025-07-28</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;815 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to 这样写Git Commit Message也许会更好" href="http://localhost:9183/zh/posts/2025_07_28-how_to_write_git_commit_message/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">Vial初探
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>前段时间，在网络上看到一款比较迷你、造型又比较精致的CNC直列48键键盘Cornix，遂动心购买。由于是不完全的小配列，所以说需要借助到一款 Vial↗ 来完成对于键盘按键的配置。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-07-28 08:52:51 +0800 CST'>2025-07-28</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;477 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to Vial初探" href="http://localhost:9183/zh/posts/2025_07_28-vial/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">开源背叛Alist以及新的替代OpenList
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>我在之前的博客中也介绍过 Alist相关的使用 ，曾经作为一个广受欢迎的多平台开源云存储整合项目，由于其支持多种格式云存储统一管理的功能，在开源社区中吸引了众多的支持者。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-07-21 20:51:25 +0800 CST'>2025-07-21</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;521 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to 开源背叛Alist以及新的替代OpenList" href="http://localhost:9183/zh/posts/2025_07_21-the_open-source_betrayal_of_alist_and_the_new_alternative_openlist/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">关于是否将Mac mini替换为MacBookacBook Air的考量
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>最近在考量是否需要将Mac mini替换为MacBook Air，但是经过一番考量，发现自己并没有真正的使用场景。
+摄影后期的考量 旅行摄影 从旅游摄影角度来看，我真的需要当天拍完就立即后期吗？答案是否定的。在日本旅游的那几天，我明显感受到一整天的行程下来已经很累了，根本没有心情做其他事情。旅游一天后还要修图，这实在太蠢了。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-07-21 17:06:57 +0800 CST'>2025-07-21</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;896 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to 关于是否将Mac mini替换为MacBookacBook Air的考量" href="http://localhost:9183/zh/posts/2025_07_21-macmini_or_macbookair/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">如何活得更久
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>参考Github项目： 延寿指南↗ 。
+这是一个很有意思的GitHub项目，它以&#34;全因死亡率&#34;(ACM)作为核心指标，并附带了具体的学术文献的支撑，以量化的风险比例(如-47% ACM、&#43;23% ACM)来表达效果。作为一个数据驱动量化的指标来分析生活，虽然不能完全照搬，但是能够给我们提供一个很有意思的思考框架——如何基于科学证据来优化生活方式。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-07-20 15:33:16 +0800 CST'>2025-07-20</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;321 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to 如何活得更久" href="http://localhost:9183/zh/posts/2025_07_20-how_to_live_longer/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">通过ADB在Mac和Android之间传输数据
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>前言 我前段时间去日本的时候，将部分照片存在了我的安卓手机中，等我回来将照片存进我的Mac的时候出现了一些小问题，直接是用数据线连接是无法直接访问安卓手机内部的文件的。为了传输几十G的照片，使用一些局域网传输的工具显然不太合适，所以我选择使用了ADB（Android Debug Bridge）命令行工具，这是一个用于开发者通过命令行与Android设备交互的常用工具。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-07-19 23:21:24 +0800 CST'>2025-07-19</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;539 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to 通过ADB在Mac和Android之间传输数据" href="http://localhost:9183/zh/posts/2025_07_19-mac_android_with_adb/"></a>
+</article>
+
+<article class="post-entry">
+  <div class="post-info">
+    <header class="entry-header">
+      <h2 class="entry-hint-parent">2025_04_24 Sam2_paper
+        <span class="entry-hint" title="Draft">
+          <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+            <path
+              d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+          </svg>
+        </span>
+      </h2>
+    </header>
+    <div class="entry-content">
+      <p>引言 研究背景及意义 近年来，无人机（UAV）技术迅速发展，凭借其机动灵活和高空视野优势，被广泛应用于应急救援、设施巡检、安防监控等任务场景。在这些复杂环境中，无人机需要对周围环境进行全面感知与理解，以保障任务的安全高效执行。这要求无人机具备实时的视觉感知能力，包括对全局场景的语义分割以及对关键目标的检测与追踪。全局语义分割提供逐像素的语义信息，使无人机能够分辨不同类别的地物（如道路、建筑、人员等），为路径规划和决策提供依据；目标检测与追踪则使无人机可以发现并持续锁定感兴趣的目标（如遇险人员、可疑物体），实现精细化的监视与搜救。这要求无人机具备实时的视觉感知能力，包括对全局场景的语义分割以及对关键目标的检测与追踪。全局语义分割提供逐像素的语义信息，使无人机能够分辨不同类别的地物（如道路、建筑、人员等），为路径规划和决策提供依据；目标检测与追踪则使无人机可以发现并持续锁定感兴趣的目标（如遇险人员、可疑物体），实现精细化的监视与搜救。其中，语义分割作为关键手段，被广泛用于无人机视角下场景的理解和关键目标的识别，满足多种典型应用需求。
+...</p>
+    </div>
+    <footer class="entry-footer"><span title='2025-04-24 19:28:37 +0800 CST'>2025-04-24</span>&nbsp;·&nbsp;48 min&nbsp;·&nbsp;23686 words&nbsp;·&nbsp;Downmars</footer>
+  </div>
+   
+  <a class="entry-link" aria-label="post link to 2025_04_24 Sam2_paper" href="http://localhost:9183/zh/posts/2025_04_24-sam2_paper/"></a>
+</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="prev" href="http://localhost:9183/">
+      «&nbsp;Prev&nbsp;
+    </a>
+    <a class="next" href="http://localhost:9183/page/3/">Next&nbsp;&nbsp;»
+    </a>
+  </nav>
+</footer>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2026 <a href="http://localhost:9183/">Wayne&#39;Log</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a><script>
+  (function () {
+    var i, text, code, codes = document.getElementsByTagName("code");
+    for (i = 0; i < codes.length; ) {
+      code = codes[i];
+      if (code.parentNode.tagName !== "PRE" && code.childElementCount === 0) {
+        text = code.textContent;
+        if (/^\$[^$]/.test(text) && /[^$]\$$/.test(text)) {
+          text = text.replace(/^\$/, "\\(").replace(/\$$/, "\\)");
+          code.textContent = text;
+        }
+        if (
+          /^\\\((.|\s)+\\\)$/.test(text) ||
+          /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$(.|\s)+\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)
+        ) {
+          code.outerHTML = code.innerHTML; 
+          continue;
+        }
+      }
+      i++;
+    }
+  })();
+</script>
+<script src="http://localhost:9183/js/carousel.js"></script>
+
+<script>
+  (function (u, c) {
+    var d = document,
+      t = "script",
+      o = d.createElement(t),
+      s = d.getElementsByTagName(t)[0];
+    o.src = u;
+    if (c) {
+      o.addEventListener("load", function (e) {
+        c(e);
+      });
+    }
+    s.parentNode.insertBefore(o, s);
+  })("\/js\/pangu.min.js", function () {
+    pangu.spacingPage();
+  });
+</script>
+
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+
+
+ 
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+
+
+<section class="totalcount">
+    
+      
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+    
+    总计184.09k字
+</section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
+
+<script src="/js/admonition.min.33aa3259ace2dcae05d7c1cebb7eddb5da4d69bc5b147e9e7a59839d96b71bc2.js" defer></script>
+</body>
+
+</html>
