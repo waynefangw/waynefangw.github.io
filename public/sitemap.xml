@@ -2,69 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:12409/posts/2025_12_09-clone_your_archlinux/</loc>
+    <loc>https://waynefangw.github.io/posts/2025_12_09-clone_your_archlinux/</loc>
     <lastmod>2025-12-09T22:27:02+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:12409/</loc>
+    <loc>https://waynefangw.github.io/</loc>
     <lastmod>2025-12-09T22:27:02+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:12409/posts/</loc>
+    <loc>https://waynefangw.github.io/posts/</loc>
     <lastmod>2025-12-09T22:27:02+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_11_16-build_a_personal_website/</loc>
+    <loc>https://waynefangw.github.io/posts/2025_11_16-build_a_personal_website/</loc>
     <lastmod>2025-11-16T17:41:01+08:00</lastmod>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_10_16-try_to_port_my_archlinux_on_xiaomi_pad_5/</loc>
-    <lastmod>2025-10-26T01:12:29+08:00</lastmod>
+    <loc>https://waynefangw.github.io/archives/</loc>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_10_16-fix_grub_boot_corruption_and_kernel_corruption_caused_by_arch_update/</loc>
-    <lastmod>2025-10-16T00:38:04+08:00</lastmod>
+    <loc>https://waynefangw.github.io/categories/</loc>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_10_06-weight_loss_diary/</loc>
-    <lastmod>2025-10-06T23:08:04+08:00</lastmod>
+    <loc>https://waynefangw.github.io/search/search/</loc>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_10_05-how_to_lose_weight_reasonably/</loc>
-    <lastmod>2025-10-05T00:14:10+08:00</lastmod>
+    <loc>https://waynefangw.github.io/search/</loc>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_09_16-register_method_and_hal_method_to_complete_interrupt_serial_port_processing/</loc>
-    <lastmod>2025-09-16T17:04:56+08:00</lastmod>
+    <loc>https://waynefangw.github.io/tags/</loc>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_09_15-how_to_resolve_conflicts_between_self_build_packages_and_old_projects/</loc>
-    <lastmod>2025-09-15T16:54:26+08:00</lastmod>
+    <loc>https://waynefangw.github.io/zh/</loc>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_08_25-dma_and_cache_consistency/</loc>
-    <lastmod>2025-08-25T18:00:56+08:00</lastmod>
+    <loc>https://waynefangw.github.io/zh/search/search/</loc>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_08_21-microcontroller_literacy_taking_stm32h7_as_an_example/</loc>
-    <lastmod>2025-08-21T18:03:33+08:00</lastmod>
+    <loc>https://waynefangw.github.io/zh/archives/</loc>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_08_07-zh3408_modbus_document_instructions_for_use/</loc>
-    <lastmod>2025-08-07T17:13:55+08:00</lastmod>
+    <loc>https://waynefangw.github.io/zh/friends/</loc>
   </url><url>
-    <loc>http://localhost:12409/posts/2025_08_06-stm32h7_serial_port_dma_driver_principle/</loc>
-    <lastmod>2025-08-06T10:53:31+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:12409/posts/2025_07_29-do_i_need_neovim_plugins/</loc>
-    <lastmod>2025-07-29T15:41:59+08:00</lastmod>
-  </url><url>
-    <loc>http://localhost:12409/archives/</loc>
-  </url><url>
-    <loc>http://localhost:12409/categories/</loc>
-  </url><url>
-    <loc>http://localhost:12409/search/search/</loc>
-  </url><url>
-    <loc>http://localhost:12409/search/</loc>
-  </url><url>
-    <loc>http://localhost:12409/tags/</loc>
-  </url><url>
-    <loc>http://localhost:12409/zh/</loc>
-  </url><url>
-    <loc>http://localhost:12409/zh/search/search/</loc>
-  </url><url>
-    <loc>http://localhost:12409/zh/archives/</loc>
-  </url><url>
-    <loc>http://localhost:12409/zh/friends/</loc>
-  </url><url>
-    <loc>http://localhost:12409/zh/thoughts/search/</loc>
+    <loc>https://waynefangw.github.io/zh/thoughts/search/</loc>
   </url>
 </urlset>
