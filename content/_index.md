@@ -1,6 +1,6 @@
 ---
 title: "Home"
-layout: "home"
+type: "home"
 ShowBreadCrumbs: false
 ---
 
