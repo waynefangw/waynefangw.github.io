@@ -88,6 +88,7 @@ params:
     customCSS:
       - css/common/header.css # 存放上述CSS
       - css/extended/carousel.css
+      - css/extended/table.css
   # 评论设置
   giscus:
     repo: "Downmars/Downmars.github.io"

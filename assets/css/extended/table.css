@@ -1,0 +1,85 @@
+/* 表格样式 - 符合主题风格的边框 */
+
+/* 表格容器 - 支持响应式滚动 */
+.table-wrapper {
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-radius: var(--radius);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* 表格基础样式 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background: var(--entry);
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+/* 外边框 */
+table {
+  border: 1px solid var(--border);
+}
+
+/* 单元格样式 */
+th, td {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+}
+
+/* 表头样式 */
+thead th {
+  background: var(--code-bg);
+  font-weight: 600;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border);
+  text-align: left;
+}
+
+/* 表体第一列的标题样式（可选） */
+tbody th {
+  background: var(--code-bg);
+  font-weight: 600;
+}
+
+/* 斑马纹 - 隔行变色 */
+tbody tr:nth-child(even) {
+  background: var(--code-bg);
+}
+
+tbody tr:nth-child(odd) {
+  background: var(--entry);
+}
+
+/* 悬停效果 */
+tbody tr:hover {
+  background: var(--tertiary);
+  transition: background 0.2s ease;
+}
+
+/* 表格内的链接样式 */
+table a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+table a:hover {
+  color: var(--secondary);
+  text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  table {
+    font-size: 0.85em;
+  }
+  
+  th, td {
+    padding: 0.5rem 0.75rem;
+  }
+}
